@@ -1,6 +1,9 @@
 export function caesarCipher(string, shift) {
   let result = "";
 
+  if (typeof string !== "string") {
+    throw new Error("Input must be a string");
+  }
   for (const char of string) {
     const code = char.charCodeAt(0); // Gets the character code of the current character
 

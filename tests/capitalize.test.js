@@ -24,3 +24,7 @@ test("multiple words", () => {
 test("numbers", () => {
   expect(capitalize("123")).toBe("123");
 });
+
+test("not a string", () => {
+  expect(() => capitalize(123)).toThrow("Input must be a string");
+});

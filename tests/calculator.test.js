@@ -47,3 +47,7 @@ test("multiply by 0", () => {
 test("divide by 0", () => {
   expect(calculator.divide(1, 0)).toBe(Infinity);
 });
+
+test("not a number", () => {
+  expect(() => calculator.add(1, "a")).toThrow("Input must be numbers");
+});

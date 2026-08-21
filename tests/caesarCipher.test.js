@@ -31,3 +31,7 @@ test("preserves numbers", () => {
 test("handles a shift of 0", () => {
   expect(caesarCipher("abc", 0)).toBe("abc");
 });
+
+test("not a string", () => {
+  expect(() => caesarCipher(123, 0)).toThrow("Input must be a string");
+});
